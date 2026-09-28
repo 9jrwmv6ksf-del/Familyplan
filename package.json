@@ -1,0 +1,15 @@
+{
+  "name": "familyplan",
+  "version": "1.0.0",
+  "description": "Kinderfreundlicher Familienorganiser: Kalender, Ämtli mit Punkten, Einkaufsliste und Essensplan – mit Echtzeit-Sync und Offline-Modus.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/server.js",
+    "test": "node --test --no-warnings"
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Familyplan</title>
+  <meta name="description" content="Unser Familienorganiser: Termine, Ämtli, Einkaufsliste und Essensplan.">
+  <meta name="theme-color" content="#ff8a3d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Familyplan">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">🏡</span> Familyplan</div>
+    <button id="sync-status" class="sync" type="button" title="Synchronisierung">…</button>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav class="tabs" aria-label="Bereiche">
+    <button type="button" data-view="home"><span aria-hidden="true">🏠</span>Heute</button>
+    <button type="button" data-view="calendar"><span aria-hidden="true">📅</span>Kalender</button>
+    <button type="button" data-view="tasks"><span aria-hidden="true">✅</span>Ämtli</button>
+    <button type="button" data-view="shopping"><span aria-hidden="true">🛒</span>Einkauf</button>
+    <button type="button" data-view="meals"><span aria-hidden="true">🍽️</span>Essen</button>
+    <button type="button" data-view="family"><span aria-hidden="true">👨‍👩‍👧</span>Familie</button>
+  </nav>
+
+  <dialog id="modal"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>Bitte JavaScript aktivieren, um Familyplan zu nutzen.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
